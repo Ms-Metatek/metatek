@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        .department {
+            margin-bottom: 20px;
+        }
+        .department h2 {
+            cursor: pointer;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .links {
+            display: none;
+            margin-left: 20px;
+        }
+        .links a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleLinks(department) {
+            const links = document.getElementById(department);
+            links.style.display = links.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Department Links</h1>
+
+    <div class="department">
+        <h2 onclick="toggleLinks('hr')">HR</h2>
+        <div class="links" id="hr">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSPCTjO0HD_p_KA7Ci6-zW3-Ih2YlcnsYO-RJp2dy8l7J09A/viewform" target="_blank">Resource Requisition Form</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeYHmS1UlKyrn8N__6v8gSLirvQaa8F8UPw9R8jrG8JxbufQ/viewform" target="_blank">Job Roll Form</a>
+            <a href="https://lookerstudio.google.com/reporting/b1a80064-5c98-4e82-86a5-4b6255ef3997/page/CeVZE" target="_blank">Checklist Dashboard</a>
+        </div>
+    </div>
+
+    <div class="department">
+        <h2 onclick="toggleLinks('sales')">Sales</h2>
+        <div class="links" id="sales">
+            <a href="https://lookerstudio.google.com/reporting/b1a80064-5c98-4e82-86a5-4b6255ef3997/page/CeVZE" target="_blank">Checklist Dashboard</a>
+        </div>
+    </div>
+
+    <div class="department">
+        <h2 onclick="toggleLinks('mis')">MIS</h2>
+        <div class="links" id="mis">
+            <a href="https://docs.google.com/spreadsheets/d/17bDCt5vi4fGUk6FKmBhq8n8txS6aRswbdDqWPEOYLk/edit?gid=372983513" target="_blank">FMS</a>
+        </div>
+    </div>
+</body>
+</html>
